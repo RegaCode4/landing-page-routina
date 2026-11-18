@@ -4,7 +4,7 @@
 
 ## Konsep dan keputusan editorial
 
-Judul “Make every day count.” muncul di sisi kiri hero desktop. Di sisi kanan, dashboard Home menutupi sebagian Kalender di depan bidang Ember berbentuk muka jam. Bingkai kobalt, sudut pandang berlawanan, dan posisi Home di depan mengikuti foto dua ponsel yang diberikan saat review. Shell Android dibuat dari layer FigCraft. Isi layar berasal dari desain aplikasi Routina.
+Judul “Make every day count.” muncul di sisi kiri hero desktop. Di sisi kanan, dashboard Home menutupi sebagian Kalender di depan bidang Ember berbentuk muka jam. Hero memakai gambar transparan dua ponsel yang diberikan pemilik. Satu master FigCraft mengatur gambar Home dan Kalender untuk keempat ukuran serta frame detail hero.
 
 Tujuh gambar Finorix dalam folder referensi menjadi acuan untuk kontras hero gelap, kartu fitur dengan cuplikan produk, jeda antarseksi, FAQ, dan pengulangan CTA di akhir. Pada Routina, bagian tengah mengikuti urutan keputusan pengguna dari merencanakan jadwal, menjalani rutinitas, hingga membaca progres pribadi. Angka diberi konteks demo. Copy website menggunakan bahasa Inggris mengikuti brief. UI di dalam ponsel mempertahankan bahasa Indonesia.
 
@@ -24,7 +24,7 @@ Tujuh frame pendukung membentuk pustaka desain.
 | `WEB_00_Design_System` | Palet, pasangan font, heading, dan token |
 | `WEB_05_Hero_Detail` | Komposisi hero pada skala desktop |
 | `WEB_06_Feature_Cards` | Kartu fitur, kartu unggulan dengan preview, dan metrik pribadi |
-| `WEB_07_Phone_Mockups` | Tujuh layar produk dalam shell netral, serta Home dan Kalender dalam shell hero biru |
+| `WEB_07_Phone_Mockups` | Tujuh layar produk dalam shell netral, serta master gambar hero dua ponsel biru |
 | `WEB_08_FAQ_States` | Pertanyaan tertutup, jawaban terbuka, dan fokus keyboard |
 | `WEB_09_Download_States` | Dua keluarga CTA, kartu kandidat, dan dua ukuran panel verifikasi |
 | `WEB_10_Navigation_States` | Header, footer, dan menu ringkas beserta tujuan tiap breakpoint |
@@ -63,16 +63,17 @@ Bricolage Grotesque dipakai untuk judul, paragraf, dan tombol. Space Mono membed
 
 Margin isi pada 1440, 768, dan ponsel masing-masing 80, 44, dan 20 px. Jarak grid 24, 18, dan 14 px. Mayoritas radius kartu 15–24 px dan tombol utama tinggi 50 px dengan radius 25 px. Gunakan garis dalam 1 px untuk pemisah. Outline pekat dan bayangan offset terutama berasal dari UI produk di dalam ponsel.
 
-Ada **12 keluarga komponen** yang dapat digunakan ulang. Header dan responsive menu mengelola navigasi. Primary CTA dan secondary CTA memiliki state default, hover, focus, active, dan disabled. Feature card, feature highlight, statistics card, dan section heading mengatur konten editorial. Phone mockup menampung layar asli dalam shell netral atau kobalt. FAQ accordion, download information card, dan footer melengkapi halaman. Dokumen berisi 30 master komponen, dua set varian tombol, empat text styles, dan satu koleksi dengan sepuluh warna serta delapan boolean FAQ.
+Ada **12 keluarga komponen** yang dapat digunakan ulang. Header dan responsive menu mengelola navigasi. Primary CTA dan secondary CTA memiliki state default, hover, focus, active, dan disabled. Feature card, feature highlight, statistics card, dan section heading mengatur konten editorial. Phone mockup mencakup shell netral untuk layar tunggal serta master PNG untuk pasangan ponsel pada hero. FAQ accordion, download information card, dan footer melengkapi halaman. Dokumen berisi 29 master komponen, dua set varian tombol, empat text styles, dan satu koleksi dengan sepuluh warna serta delapan boolean FAQ.
 
 ## Aset dan provenance
 
-Folder [aset desain](../design/assets/) bersifat mandiri. Ketujuh PNG layar diekspor oleh FigCraft pada 1,5× dari frame 390 × 844, menghasilkan 585 × 1266 px. Bingkai ponsel, tombol, tipografi, dan layout website dapat diedit. Untuk mengubah isi screenshot, revisi sumber aplikasi melalui fase tersendiri dan ganti isi aperture pada master perangkat.
+Folder [aset desain](../design/assets/) bersifat mandiri. Ketujuh PNG layar diekspor oleh FigCraft pada 1,5× dari frame 390 × 844, menghasilkan 585 × 1266 px. Hero menggunakan PNG komposit berasio 1447:1087. Pertahankan transparansi dan rasio saat mengatur ukurannya. Untuk mengganti visual hero di semua ukuran, ganti layer gambar pada master di `WEB_07_Phone_Mockups`. Master layar tunggal menggunakan ekspor aplikasi pada aperture terpisah.
 
 | Aset website | Frame aplikasi asli | Peran |
 | --- | --- | --- |
-| [home.png](../design/assets/home.png) | `SC04_Home_Default` · 175 | Hero depan dan galeri |
-| [calendar.png](../design/assets/calendar.png) | `SC05_Calendar_Month` · 1535 | Hero belakang, fitur kalender, galeri |
+| [mockupphone.png](../design/assets/mockupphone.png) | PNG transparan dari pemilik · 1447 × 1087 px | Gambar hero desktop, tablet, ponsel, dan frame detail |
+| [home.png](../design/assets/home.png) | `SC04_Home_Default` · 175 | Referensi Home dan galeri |
+| [calendar.png](../design/assets/calendar.png) | `SC05_Calendar_Month` · 1535 | Fitur kalender dan galeri |
 | [tasks.png](../design/assets/tasks.png) | `SC11_Todo_Default` · 5428 | Fitur tugas dan galeri |
 | [routines.png](../design/assets/routines.png) | `SC14_Routines_Default` · 6958 | Referensi log dan galeri |
 | [statistics.png](../design/assets/statistics.png) | `SC22_Stats_Week` · 9438 | Referensi KPI, galeri, CTA penutup |
