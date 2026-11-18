@@ -93,6 +93,18 @@ Sumber visual aplikasi adalah `Personal Planner - Flutter UI Design.figcraft`, t
 - Rasio pasangan warna terhitung sebesar 16,02:1 untuk Ink/Cream, 5,48:1 untuk Ink/Ember, 6,79:1 untuk teks sekunder/Cream, dan 8,23:1 untuk label terang/charcoal. Angka metrik, teks penjelas, dan state pending tetap dapat dimengerti tanpa membedakan warna.
 - Pada fase Astro, uji zoom teks 200%, navigasi Tab, fokus sesudah menutup menu, pembacaan screen reader, dan sentuhan pada perangkat. Validasi ini memerlukan implementasi browser. Pertahankan target interaktif minimal 44 × 44 CSS px dan gunakan offset anchor agar header sticky tidak menutup judul.
 
+## Contoh animasi section
+
+Buka halaman `Routina · Motion Studies` dalam dokumen FigCraft, lalu pilih salah satu dari tiga flow melalui **Present**. Ketiganya memakai kanvas studi 460 px. [Pratinjau animasi berdampingan](../design/review/section-motion.webp)
+
+| Flow | Gerakan yang bisa dicoba | Acuan di `portfolio-master/src/components/` |
+| --- | --- | --- |
+| `Motion · Hero` | Dua baris judul muncul dari bawah batas barisnya. Setelah jeda awal 240 ms, baris pertama naik selama 420 ms, lalu baris Ember menyusul setelah jeda 90 ms. Mockup dari pemilik tetap terlihat. Tekan Replay untuk mengulang. | `views/expertise.tsx` mengungkap teks per baris dengan mask dan stagger. |
+| `Motion · Smart Scheduling` | Tiga frasa pada “Find time for what matters.” berubah dari abu-abu ke Cream secara berurutan, masing-masing 350 ms. Kartu slot dan persetujuan tetap diam agar contoh jadwal dapat dibaca. | `typography/text-reveal.tsx` menyalakan kata mengikuti progres scroll. Studi memakai tiga frasa dan pemicu waktu. |
+| `Motion · App Screenshots` | Next screen, drag, atau panah kanan memindahkan layar berikutnya ke tengah selama 480 ms. Gunakan Previous atau panah kiri untuk mundur. Dari Statistik, Replay gallery kembali ke Home. | `views/works.tsx` menggerakkan track secara horizontal saat section desktop dipin. Studi memakai navigasi manual. |
+
+Gerakan merupakan opsi untuk review Fase 21A. Pratinjau WebP menggerakkan galeri otomatis agar ketiga contoh dapat dibandingkan. Dalam flow FigCraft, pembaca sendiri menentukan kapan galeri bergerak. Untuk implementasi dengan reduced motion, tampilkan langsung judul dalam keadaan akhir dan pindahkan galeri ke layar pilihan tanpa transisi.
+
 ## Handoff implementasi Astro setelah persetujuan
 
 Gunakan root website ini untuk halaman statis Astro. Pecah layout per bagian dengan komponen bersama bagi CTA, perangkat, kartu fitur, FAQ, dan metadata rilis. Salin teks sebagai HTML yang bisa dipilih. Gunakan satu h1, heading berurutan, landmark semantik, anchor bernama, dan skip link. Susun grid dengan media query sekitar 600 dan 1100 px sebagai titik awal untuk menguji lebar di antara empat frame. Biarkan tinggi section mengikuti isi, termasuk ketika teks membesar.
