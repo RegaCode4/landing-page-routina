@@ -4,18 +4,18 @@
 
 ## Konsep dan keputusan editorial
 
-Judul “Make every day count.” muncul di sisi kiri hero desktop. Di sisi kanan, dashboard Home menutupi sebagian Kalender di depan bidang Ember berbentuk muka jam. Hero memakai gambar transparan dua ponsel yang diberikan pemilik. Satu master FigCraft mengatur gambar Home dan Kalender untuk keempat ukuran serta frame detail hero.
+Komposisi hero mengikuti frame desktop, tablet, dan mobile Tagihin. Judul “Make every day count.”, deskripsi, dan CTA rata tengah pada bidang putih. Di bawahnya, mockup Home dan Kalender berada di tengah bidang gradasi ubin selebar frame. Gradasi memakai ekspor visual `Untitled blend.html` dengan palet yang juga tercantum di `Untitled blend.css`. Hero memakai gambar transparan dua ponsel yang diberikan pemilik. Satu master FigCraft mengatur gambar Home dan Kalender untuk keempat ukuran serta frame detail hero.
 
-Tujuh gambar Finorix dalam folder referensi menjadi acuan untuk kontras hero gelap, kartu fitur dengan cuplikan produk, jeda antarseksi, FAQ, dan pengulangan CTA di akhir. Pada Routina, bagian tengah mengikuti urutan keputusan pengguna dari merencanakan jadwal, menjalani rutinitas, hingga membaca progres pribadi. Angka diberi konteks demo. Copy website menggunakan bahasa Inggris mengikuti brief. UI di dalam ponsel mempertahankan bahasa Indonesia.
+Tujuh gambar Finorix dalam folder referensi menjadi acuan untuk kartu fitur dengan cuplikan produk, jeda antarseksi, FAQ, dan pengulangan CTA di akhir. Pada Routina, bagian tengah mengikuti urutan keputusan pengguna dari merencanakan jadwal, menjalani rutinitas, hingga membaca progres pribadi. Angka diberi konteks demo. Copy website menggunakan bahasa Inggris mengikuti brief. UI di dalam ponsel mempertahankan bahasa Indonesia.
 
 ## Frame dan QA responsif
 
 | Frame | Ukuran desain (px) | Hasil review |
 | --- | --- | --- |
-| `WEB_01_Desktop_1440` | 1440 × 7756 | Navigasi penuh, hero dua kolom, dua kartu besar dan empat kartu pendukung sebaris, lima layar galeri terlihat. [Render](../design/review/layout-1440.webp) |
-| `WEB_02_Tablet_768` | 768 × 8197 | Menu ringkas, ponsel di bawah copy hero, kartu pendukung dua kolom, spotlight dan unduhan bertumpuk. [Render](../design/review/layout-768.webp) |
-| `WEB_03_Mobile_390` | 390 × 10110 | CTA bertumpuk, fitur dan metrik menjadi satu kolom, galeri memperlihatkan sebagian layar berikutnya. [Render](../design/review/layout-390.webp) |
-| `WEB_04_Mobile_320_Check` | 320 × 10118 | Seluruh section termuat. Dua ponsel berada di bawah label platform. Tombol galeri dipadatkan, metadata tetap terbaca, dan checksum terbagi empat baris. [Render](../design/review/layout-320.webp) |
+| `WEB_01_Desktop_1440` | 1440 × 7834 | Navigasi penuh, hero terpusat di atas mockup, dua kartu besar dan empat kartu pendukung sebaris, lima layar galeri terlihat. [Render](../design/review/layout-1440.webp) |
+| `WEB_02_Tablet_768` | 768 × 8162 | Menu ringkas, ponsel di bawah copy hero, kartu pendukung dua kolom, spotlight dan unduhan bertumpuk. [Render](../design/review/layout-768.webp) |
+| `WEB_03_Mobile_390` | 390 × 10039 | CTA bertumpuk, fitur dan metrik menjadi satu kolom, galeri memperlihatkan sebagian layar berikutnya. [Render](../design/review/layout-390.webp) |
+| `WEB_04_Mobile_320_Check` | 320 × 10060 | Seluruh section termuat. Dua ponsel berada di bawah label platform. Tombol galeri dipadatkan, metadata tetap terbaca, dan checksum terbagi empat baris. [Render](../design/review/layout-320.webp) |
 
 Tujuh frame pendukung membentuk pustaka desain.
 
@@ -52,14 +52,14 @@ Tujuh frame pendukung membentuk pustaka desain.
 
 | Peran | Nilai | Pemakaian |
 | --- | --- | --- |
-| Ink / Cream | `#171717` / `#F5F2E9` | Hero, permukaan baca, dan teks utama |
-| Ember | `#EE613E` | Aksen judul, dial, dan CTA utama. Identitas launcher/splash telah disetujui pemilik dalam fase branding. |
+| Ink / Cream | `#171717` / `#F5F2E9` | Judul hero, permukaan baca, dan teks utama |
+| Ember | `#EE613E` | CTA utama dan warna gradasi hero. Identitas launcher/splash telah disetujui pemilik dalam fase branding. |
 | Blue / Yellow / Coral | `#537BFF` / `#FFE65B` / `#FF8C82` | Aksen produk. Warna pendamping dipakai terbatas pada ilustrasi serta layar aplikasi. |
 | Pendukung | `#FFFFFF`, `#55544D`, `#D7D3C8` | Permukaan kartu, body sekunder, dan pemisah |
 | Fokus | `#182C73` | Outline fokus 3 px yang terlihat di atas Ember dan Cream |
 | Permukaan editorial | `#262521`, `#F3DE85`, `#E5EBFF`, `#ED7957` | Galeri, log rutinitas, statistik, unduhan |
 
-Bricolage Grotesque dipakai untuk judul, paragraf, dan tombol. Space Mono membedakan waktu, versi dan label kecil. Ukuran judul hero dari desktop ke layar sempit adalah 94, 68, 60 dan 51 px. Judul section umumnya 58, 45, 40 dan 35 px. Body utama 16–22 px dengan line-height sekitar 1,4. Label pendamping 11 px selalu mendapat keterangan yang lebih besar bila informasinya menentukan tindakan.
+Bricolage Grotesque dipakai untuk judul, paragraf, dan tombol. Space Mono membedakan waktu, versi dan label kecil. Ukuran judul hero dari desktop ke layar sempit adalah 74, 66, 52 dan 47 px. Judul section umumnya 58, 45, 40 dan 35 px. Body utama 16–22 px dengan line-height sekitar 1,4. Label pendamping 11 px selalu mendapat keterangan yang lebih besar bila informasinya menentukan tindakan.
 
 Margin isi pada 1440, 768, dan ponsel masing-masing 80, 44, dan 20 px. Jarak grid 24, 18, dan 14 px. Mayoritas radius kartu 15–24 px dan tombol utama tinggi 50 px dengan radius 25 px. Gunakan garis dalam 1 px untuk pemisah. Outline pekat dan bayangan offset terutama berasal dari UI produk di dalam ponsel.
 
@@ -71,6 +71,7 @@ Folder [aset desain](../design/assets/) bersifat mandiri. Ketujuh PNG layar diek
 
 | Aset website | Frame aplikasi asli | Peran |
 | --- | --- | --- |
+| [hero-blend.png](../design/assets/hero-blend.png) | SVG dari `Untitled blend.html` · raster 1440 × 966 px | Bidang visual penuh di belakang mockup, gunakan pemotongan tengah |
 | [mockupphone.png](../design/assets/mockupphone.png) | PNG transparan dari pemilik · 1447 × 1087 px | Gambar hero desktop, tablet, ponsel, dan frame detail |
 | [home.png](../design/assets/home.png) | `SC04_Home_Default` · 175 | Referensi Home dan galeri |
 | [calendar.png](../design/assets/calendar.png) | `SC05_Calendar_Month` · 1535 | Fitur kalender dan galeri |
@@ -99,7 +100,7 @@ Buka halaman `Routina · Motion Studies` dalam dokumen FigCraft, lalu pilih sala
 
 | Flow | Gerakan yang bisa dicoba | Acuan di `portfolio-master/src/components/` |
 | --- | --- | --- |
-| `Motion · Hero` | Dua baris judul muncul dari bawah batas barisnya. Setelah jeda awal 240 ms, baris pertama naik selama 420 ms, lalu baris Ember menyusul setelah jeda 90 ms. Mockup dari pemilik tetap terlihat. Tekan Replay untuk mengulang. | `views/expertise.tsx` mengungkap teks per baris dengan mask dan stagger. |
+| `Motion · Hero` | Dua baris judul muncul dari bawah batas barisnya. Setelah jeda awal 240 ms, baris pertama naik selama 420 ms, lalu baris “day count.” menyusul setelah jeda 90 ms. Mockup dari pemilik tetap terlihat. Tekan Replay untuk mengulang. | `views/expertise.tsx` mengungkap teks per baris dengan mask dan stagger. |
 | `Motion · Smart Scheduling` | Tiga frasa pada “Find time for what matters.” berubah dari abu-abu ke Cream secara berurutan, masing-masing 350 ms. Kartu slot dan persetujuan tetap diam agar contoh jadwal dapat dibaca. | `typography/text-reveal.tsx` menyalakan kata mengikuti progres scroll. Studi memakai tiga frasa dan pemicu waktu. |
 | `Motion · App Screenshots` | Next screen, drag, atau panah kanan memindahkan layar berikutnya ke tengah selama 480 ms. Gunakan Previous atau panah kiri untuk mundur. Dari Statistik, Replay gallery kembali ke Home. | `views/works.tsx` menggerakkan track secara horizontal saat section desktop dipin. Studi memakai navigasi manual. |
 
@@ -109,7 +110,7 @@ Gerakan merupakan opsi untuk review Fase 21A. Pratinjau WebP menggerakkan galeri
 
 Gunakan root website ini untuk halaman statis Astro. Pecah layout per bagian dengan komponen bersama bagi CTA, perangkat, kartu fitur, FAQ, dan metadata rilis. Salin teks sebagai HTML yang bisa dipilih. Gunakan satu h1, heading berurutan, landmark semantik, anchor bernama, dan skip link. Susun grid dengan media query sekitar 600 dan 1100 px sebagai titik awal untuk menguji lebar di antara empat frame. Biarkan tinggi section mengikuti isi, termasuk ketika teks membesar.
 
-Gunakan anchor untuk navigasi, disclosure native untuk FAQ dan checksum, serta overflow-x dengan scroll snap untuk galeri. JavaScript minimal cukup untuk menu dan manajemen fokus bila diperlukan. Gunakan focus-visible dan reduced-motion. Sediakan alt yang menyebut layar dan fungsinya, sembunyikan dial dan chrome ponsel dari pembaca layar, serta tampilkan isi penting setiap ilustrasi juga sebagai teks. Pertahankan prioritas unduh untuk visual hero dan lazy-load layar di bawah fold. Pilih ukuran gambar responsif dari master. Sajikan font lokal dengan lisensi yang tersedia.
+Gunakan anchor untuk navigasi, disclosure native untuk FAQ dan checksum, serta overflow-x dengan scroll snap untuk galeri. JavaScript minimal cukup untuk menu dan manajemen fokus bila diperlukan. Gunakan focus-visible dan reduced-motion. Sediakan alt yang menyebut layar dan fungsinya, sembunyikan latar gradasi dan chrome ponsel dari pembaca layar, serta tampilkan isi penting setiap ilustrasi juga sebagai teks. Pertahankan prioritas unduh untuk visual hero dan lazy-load layar di bawah fold. Pilih ukuran gambar responsif dari master. Sajikan font lokal dengan lisensi yang tersedia.
 
 ### Aktivasi unduhan
 
