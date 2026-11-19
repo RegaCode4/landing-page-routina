@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://routina.web.id/sitemap.xml

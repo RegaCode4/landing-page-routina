@@ -1,9 +1,11 @@
 ---
 import type { AppLocale, Dictionary } from "@/common/i18n";
 import { logo } from "@/common/assets";
+import shareImage from "../../design/assets/web/mockupphone-800.webp?url";
 import "@/styles/global.css";
 interface Props { lang: AppLocale; t: Dictionary }
 const { lang, t } = Astro.props;
+const canonical = new URL(`/${lang}/`, Astro.site);
 ---
 <!doctype html>
 <html lang={lang}>
@@ -12,12 +14,20 @@ const { lang, t } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{t.meta.title}</title>
     <meta name="description" content={t.meta.description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Routina" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(shareImage, Astro.site)} />
+    <meta property="og:image:alt" content={t.ui.alt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:title" content={t.meta.title} />
     <meta property="og:description" content={t.meta.description} />
     <meta property="og:locale" content={lang === "en" ? "en_US" : "id_ID"} />
     <link rel="icon" type="image/svg+xml" href={logo} />
-    <link rel="alternate" hreflang="en" href="/en/" />
-    <link rel="alternate" hreflang="id" href="/id/" />
+    <link rel="alternate" hreflang="en" href={new URL("/en/", Astro.site)} />
+    <link rel="alternate" hreflang="id" href={new URL("/id/", Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL("/en/", Astro.site)} />
   </head>
   <body id="home">
     <a class="skip" href="#main">{t.ui.skip}</a>
