@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Routina — Agenda harian offline",
-    "description": "Atur jadwal, tugas, dan rutinitas dalam satu aplikasi Android yang bisa dipakai offline."
+    "title": "Aplikasi Agenda Harian Offline untuk Android | Routina",
+    "description": "Unduh Routina, aplikasi agenda harian offline untuk Android. Atur jadwal, tugas, rutinitas, pengingat, dan statistik tanpa akun online."
   },
   "ui": {
     "skip": "Langsung ke konten",
@@ -26,9 +26,10 @@
     "Tanya jawab"
   ],
   "hero": [
-    "Jalani hari",
-    "lebih teratur."
+    "Aplikasi agenda harian",
+    "offline untuk Android."
   ],
+  "heroBody": "Atur jadwal, tugas, dan rutinitas dalam satu aplikasi Android yang bisa dipakai offline.",
   "platform": "Android 7.0+  /  Rilis publik",
   "overview": {
     "label": "Sekilas Routina",
@@ -194,7 +195,7 @@
       ],
       [
         "Apakah Routina gratis?",
-        "Harga untuk rilis publik belum diumumkan."
+        "APK Routina 1.0.0 dapat diunduh langsung dari halaman resmi. Informasi harga untuk rilis mendatang belum ditetapkan."
       ],
       [
         "Apakah Routina bisa dipakai offline?",
@@ -230,11 +231,23 @@
     "by": "oleh Rega Code",
     "download": "Unduh",
     "pending": "APK tersedia",
+    "resources": "Informasi Routina",
     "links": [
       "Kebijakan Privasi",
-      "Ketentuan Penggunaan",
+      "Tentang Routina",
       "Catatan Rilis",
       "Kontak"
+    ]
+  },
+  "schema": {
+    "features": [
+      "Kalender agenda harian",
+      "Daftar tugas dan subtugas",
+      "Rutinitas dan pencatatan waktu",
+      "Penjadwalan cerdas dengan persetujuan pengguna",
+      "Pengingat lokal",
+      "Statistik produktivitas",
+      "Cadangan manual terenkripsi"
     ]
   }
 }

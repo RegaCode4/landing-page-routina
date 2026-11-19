@@ -200,6 +200,17 @@ footer { padding-block: 40px; }
 .footer-grid { gap: 32px; }
 footer p, footer ul { margin-top: 12px; color: var(--muted); }
 footer nav { display: grid; grid-template-columns: repeat(2,1fr); }
+.footer-resources { grid-template-columns: 1fr; margin-top: 16px; }
+.content-page { min-height: var(--section-height); padding-block: clamp(40px, 7vw, 96px); background: var(--cream); }
+.content-page article { width: min(calc(100% - 2 * var(--margin)), 880px); margin-inline: auto; padding: clamp(24px, 5vw, 64px); background: white; border: 1px solid var(--rule); border-radius: 24px; }
+.content-page h1 { margin-top: 16px; max-width: 18ch; font-size: clamp(2.8rem, 7vw, 5.5rem); text-wrap: balance; }
+.content-header .intro { margin-top: 24px; max-width: 65ch; font-size: clamp(1.1rem, 2vw, 1.35rem); }
+.page-date { margin-top: 18px; color: var(--muted); font: .8125rem "Space Mono", monospace; }
+.content-page section { margin-top: clamp(36px, 6vw, 64px); }
+.content-page section h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+.content-page section p, .content-page section li { margin-top: 14px; max-width: 72ch; color: var(--muted); font-size: 1.0625rem; }
+.content-page section ul { padding-left: 20px; }
+.page-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(40px, 7vw, 72px); }
 @media (min-width:600px) {
   :root { --margin: 40px; --gap: 16px; }
   .hero-actions { flex-direction: row; }

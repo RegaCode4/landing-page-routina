@@ -1,13 +1,18 @@
 ---
-import type { Dictionary } from "@/common/i18n";
+import type { AppLocale, Dictionary } from "@/common/i18n";
 import Brand from "@/components/ui/brand.astro";
-interface Props { t: Dictionary }
-const { t } = Astro.props;
+interface Props { t: Dictionary; lang: AppLocale }
+const { t, lang } = Astro.props;
+const landingPath = `/${lang}/`;
 const links = [["home",t.nav[0]],["features",t.nav[1]],["how-it-works",t.nav[2]],["faq",t.nav[4]],["download",t.footer.download]];
 ---
 <footer class="cream"><div class="wrap footer-grid">
-  <div><Brand /><p>{t.footer.by}</p></div>
-  <nav aria-label={t.ui.nav}>{links.map(([id,label]) => <a href={`#${id}`}>{label}</a>)}</nav>
+  <div><Brand href={landingPath} /><p>{t.footer.by}</p><nav class="footer-resources" aria-label={t.footer.resources}>
+    <a href={`/${lang}/privacy/`}>{t.footer.links[0]}</a>
+    <a href={`/${lang}/about/`}>{t.footer.links[1]}</a>
+    <a href="/downloads/routina-1.0.0-1-release-notes.txt">{t.footer.links[2]}</a>
+  </nav></div>
+  <nav aria-label={t.ui.nav}>{links.map(([id,label]) => <a href={`${landingPath}#${id}`}>{label}</a>)}</nav>
   <div id="contact"><p class="eyebrow">{t.footer.links[3]}</p><ul>
     <li><a href="mailto:regacode4@gmail.com">regacode4@gmail.com</a></li>
     <li><a href="https://wa.me/6282278954406">WhatsApp · 0822 7895 4406</a></li>

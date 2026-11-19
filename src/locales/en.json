@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Routina — Your offline daily planner",
-    "description": "Plan your schedule, tasks, and routines in one offline-first Android app."
+    "title": "Offline Daily Planner for Android | Routina",
+    "description": "Download Routina, an offline daily planner for Android. Organize schedules, tasks, routines, reminders, and productivity stats without an online account."
   },
   "ui": {
     "skip": "Skip to content",
@@ -26,9 +26,10 @@
     "FAQ"
   ],
   "hero": [
-    "Make every",
-    "day count."
+    "Your offline daily planner",
+    "for Android."
   ],
+  "heroBody": "Plan your schedule, tasks, and routines in one offline-first Android app.",
   "platform": "Android 7.0+  /  Public release",
   "overview": {
     "label": "Product overview",
@@ -194,7 +195,7 @@
       ],
       [
         "Is Routina free to use?",
-        "Pricing for the public release has yet to be announced."
+        "The Routina 1.0.0 APK can be downloaded directly from the official page. Pricing for future releases has not been set."
       ],
       [
         "Does Routina work offline?",
@@ -230,11 +231,23 @@
     "by": "by Rega Code",
     "download": "Download",
     "pending": "APK available",
+    "resources": "Routina information",
     "links": [
       "Privacy Policy",
-      "Terms of Use",
+      "About Routina",
       "Release Notes",
       "Contact"
+    ]
+  },
+  "schema": {
+    "features": [
+      "Daily agenda calendar",
+      "Tasks and subtasks",
+      "Routines and time tracking",
+      "Smart scheduling with user approval",
+      "Local reminders",
+      "Productivity statistics",
+      "Encrypted manual backup"
     ]
   }
 }

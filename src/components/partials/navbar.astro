@@ -1,21 +1,23 @@
 ---
 import { navIds, type Dictionary, type AppLocale } from "@/common/i18n";
 import Brand from "@/components/ui/brand.astro";
-interface Props { t: Dictionary; lang: AppLocale }
-const { t, lang } = Astro.props;
+interface Props { t: Dictionary; lang: AppLocale; page?: "privacy" | "about" }
+const { t, lang, page } = Astro.props;
+const landingPath = `/${lang}/`;
+const sectionPrefix = page ? landingPath : "";
 ---
 <header class="masthead">
   <nav class="nav-row" aria-label={t.ui.nav}>
-    <Brand />
-    <div class="nav-links">{navIds.map((id, i) => <a href={`#${id}`}>{t.nav[i]}</a>)}</div>
+    <Brand href={page ? landingPath : "#home"} />
+    <div class="nav-links">{navIds.map((id, i) => <a href={`${sectionPrefix}#${id}`}>{t.nav[i]}</a>)}</div>
     <div class="nav-tools">
       <div class="languages" aria-label={t.ui.language}>
-        {(["en","id"] as const).map(code => <a href={`/${code}/`} lang={code} hreflang={code} aria-label={code === "en" ? "English" : "Bahasa Indonesia"} aria-current={lang === code ? "page" : undefined}>{code.toUpperCase()}</a>)}
+        {(["en","id"] as const).map(code => <a href={`/${code}/${page ? `${page}/` : ""}`} lang={code} hreflang={code} aria-label={code === "en" ? "English" : "Bahasa Indonesia"} aria-current={lang === code ? "page" : undefined}>{code.toUpperCase()}</a>)}
       </div>
-      <a href="#download" class="btn primary nav-download">{t.ui.download}</a>
+      <a href={`${sectionPrefix}#download`} class="btn primary nav-download">{t.ui.download}</a>
       <details class="menu">
         <summary aria-label={t.ui.menu}><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="2" /></svg></summary>
-        <div class="menu-panel">{navIds.map((id, i) => <a href={`#${id}`}>{t.nav[i]}</a>)}<a href="#download">{t.ui.preview}</a></div>
+        <div class="menu-panel">{navIds.map((id, i) => <a href={`${sectionPrefix}#${id}`}>{t.nav[i]}</a>)}<a href={`${sectionPrefix}#download`}>{t.ui.preview}</a></div>
       </details>
     </div>
   </nav>

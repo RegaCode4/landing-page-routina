@@ -1,0 +1,26 @@
+# Routina
+
+> Routina is an offline daily planner for Android, developed and published by Rega Code.
+
+Routina combines calendars, tasks, subtasks, routines, timers, local reminders, productivity statistics, and encrypted manual backups. Version 1.0.0 works without an online account, backend, or cloud synchronization. Smart Scheduling suggestions require user review and approval before they change the schedule.
+
+## Official pages
+
+- Indonesian: https://routina.web.id/id/
+- English: https://routina.web.id/en/
+- About: https://routina.web.id/en/about/
+- Privacy policy: https://routina.web.id/en/privacy/
+
+## Android release
+
+- Version: 1.0.0 (build 1)
+- Requirement: Android 7.0 or later
+- APK: https://routina.web.id/downloads/routina-1.0.0-1-universal.apk
+- SHA-256: https://routina.web.id/downloads/routina-1.0.0-1-universal.apk.sha256
+- Release notes: https://routina.web.id/downloads/routina-1.0.0-1-release-notes.txt
+
+## Public contact
+
+- Email: regacode4@gmail.com
+- WhatsApp: +62 822 7895 4406
+- Instagram: https://www.instagram.com/rega.code/

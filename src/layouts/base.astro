@@ -1,33 +1,120 @@
 ---
 import type { AppLocale, Dictionary } from "@/common/i18n";
 import { logo } from "@/common/assets";
+import { candidate } from "@/common/release";
 import shareImage from "../../design/assets/web/mockupphone-800.webp?url";
 import "@/styles/global.css";
-interface Props { lang: AppLocale; t: Dictionary }
-const { lang, t } = Astro.props;
-const canonical = new URL(`/${lang}/`, Astro.site);
+interface Props {
+  lang: AppLocale;
+  t: Dictionary;
+  page?: "privacy" | "about";
+  pageTitle?: string;
+  pageDescription?: string;
+}
+const { lang, t, page, pageTitle = t.meta.title, pageDescription = t.meta.description } = Astro.props;
+const pagePath = `/${lang}/${page ? `${page}/` : ""}`;
+const canonical = new URL(pagePath, Astro.site);
+const siteUrl = new URL("/", Astro.site).toString();
+const organizationId = `${siteUrl}#organization`;
+const websiteId = `${siteUrl}#website`;
+const appId = `${siteUrl}#app`;
+const imageUrl = new URL(shareImage, Astro.site).toString();
+const graph: Record<string, unknown>[] = [
+  {
+    "@type": "Organization",
+    "@id": organizationId,
+    name: "Rega Code",
+    url: siteUrl,
+    logo: new URL(logo, Astro.site).toString(),
+    email: "regacode4@gmail.com",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      telephone: "+62-822-7895-4406",
+      email: "regacode4@gmail.com",
+      availableLanguage: ["Indonesian", "English"],
+    },
+    sameAs: ["https://www.instagram.com/rega.code/"],
+  },
+  {
+    "@type": "WebSite",
+    "@id": websiteId,
+    url: siteUrl,
+    name: "Routina",
+    inLanguage: ["id", "en"],
+    publisher: { "@id": organizationId },
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${canonical.toString()}#webpage`,
+    url: canonical.toString(),
+    name: pageTitle,
+    description: pageDescription,
+    inLanguage: lang,
+    isPartOf: { "@id": websiteId },
+    primaryImageOfPage: { "@type": "ImageObject", url: imageUrl },
+    ...(page ? {} : { about: { "@id": appId }, mainEntity: { "@id": appId } }),
+  },
+];
+if (!page) graph.push({
+  "@type": "MobileApplication",
+  "@id": appId,
+  name: "Routina",
+  description: pageDescription,
+  url: canonical.toString(),
+  mainEntityOfPage: { "@id": `${canonical.toString()}#webpage` },
+  inLanguage: lang,
+  operatingSystem: "Android 7.0 or later",
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Productivity",
+  softwareVersion: candidate.version,
+  datePublished: "2026-11-19",
+  downloadUrl: new URL(candidate.url, Astro.site).toString(),
+  installUrl: new URL(candidate.url, Astro.site).toString(),
+  releaseNotes: new URL(candidate.releaseNotesUrl, Astro.site).toString(),
+  fileSize: `${candidate.bytes} bytes`,
+  image: imageUrl,
+  screenshot: imageUrl,
+  featureList: t.schema.features,
+  publisher: { "@id": organizationId },
+});
+const structuredData = { "@context": "https://schema.org", "@graph": graph };
 ---
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{t.meta.title}</title>
-    <meta name="description" content={t.meta.description} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Rega Code" />
+    <meta name="application-name" content="Routina" />
+    <meta name="theme-color" content="#ee613e" />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Routina" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(shareImage, Astro.site)} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="601" />
     <meta property="og:image:alt" content={t.ui.alt} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content={t.meta.title} />
-    <meta property="og:description" content={t.meta.description} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={t.ui.alt} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:locale" content={lang === "en" ? "en_US" : "id_ID"} />
+    <meta property="og:locale:alternate" content={lang === "en" ? "id_ID" : "en_US"} />
     <link rel="icon" type="image/svg+xml" href={logo} />
-    <link rel="alternate" hreflang="en" href={new URL("/en/", Astro.site)} />
-    <link rel="alternate" hreflang="id" href={new URL("/id/", Astro.site)} />
-    <link rel="alternate" hreflang="x-default" href={new URL("/en/", Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(`/en/${page ? `${page}/` : ""}`, Astro.site)} />
+    <link rel="alternate" hreflang="id" href={new URL(`/id/${page ? `${page}/` : ""}`, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(`/en/${page ? `${page}/` : ""}`, Astro.site)} />
+    <link rel="alternate" type="text/plain" title="Routina for AI agents" href={new URL("/llms.txt", Astro.site)} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body id="home">
     <a class="skip" href="#main">{t.ui.skip}</a>

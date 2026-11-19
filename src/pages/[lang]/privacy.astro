@@ -1,0 +1,21 @@
+---
+import { locales, dictionaries } from "@/common/i18n";
+import { trustPages } from "@/common/trust-pages";
+import Base from "@/layouts/base.astro";
+import Navbar from "@/components/partials/navbar.astro";
+import Footer from "@/components/partials/footer.astro";
+import TrustPage from "@/components/views/trust-page.astro";
+
+export function getStaticPaths() {
+  return locales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const t = dictionaries[lang];
+const page = trustPages[lang].privacy;
+---
+<Base {lang} {t} page="privacy" pageTitle={page.meta.title} pageDescription={page.meta.description}>
+  <Navbar {t} {lang} page="privacy" />
+  <TrustPage {page} />
+  <Footer {t} {lang} />
+</Base>

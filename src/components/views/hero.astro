@@ -9,7 +9,7 @@ const { t } = Astro.props;
 <section class="hero">
   <div class="hero-copy wrap">
     <h1>{t.hero.map((line, i) => <span class="mask"><span style={`--delay:${i ? 750 : 240}ms`}>{line}</span>{" "}</span>)}</h1>
-    <p>{t.meta.description}</p>
+    <p>{t.heroBody}</p>
     <div class="hero-actions"><a class="btn primary" href="#download">{t.ui.preview}</a><a class="btn outline" href="#features">{t.ui.features}</a></div>
     <small class="eyebrow">{t.platform}</small>
   </div>

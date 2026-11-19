@@ -1,4 +1,6 @@
 ---
 import { logo } from "@/common/assets";
+interface Props { href?: string }
+const { href = "#home" } = Astro.props;
 ---
-<a class="brand" href="#home"><img src={logo} width="36" height="36" alt="" /><span>Routina</span></a>
+<a class="brand" {href}><img src={logo} width="36" height="36" alt="" /><span>Routina</span></a>
