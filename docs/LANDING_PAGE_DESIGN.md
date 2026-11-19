@@ -70,6 +70,8 @@ Halaman memakai **12 keluarga komponen inti** yang dapat digunakan ulang. Header
 
 ## Aset dan provenance
 
+Untuk implementasi Astro, gunakan [varian WebP browser](../design/assets/web/) dan [logo SVG](../design/assets/routina-icon-ember.svg). Sediakan `srcset` dan `sizes` untuk mockup (800w, 1447w) serta latar hero (768w, 1440w) agar browser memilih satu ukuran per gambar. Tujuh screenshot menggunakan WebP lossless 585 × 1266 px. Tetapkan dimensi intrinsik pada gambar untuk menjaga ruang selama pemuatan. PNG di tabel berikut adalah master desain. Render halaman penuh dan animasi pada folder review hanya untuk peninjauan desain.
+
 Folder [aset desain](../design/assets/) bersifat mandiri. Ketujuh PNG layar diekspor oleh FigCraft pada 1,5× dari frame 390 × 844, menghasilkan 585 × 1266 px. Hero menggunakan PNG komposit berasio 1447:1087. Pertahankan transparansi dan rasio saat mengatur ukurannya. Untuk mengganti visual hero di semua ukuran, ganti layer gambar pada master di `WEB_07_Phone_Mockups`. Master layar tunggal menggunakan ekspor aplikasi pada aperture terpisah.
 
 | Aset website | Frame aplikasi asli | Peran |
