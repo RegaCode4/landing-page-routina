@@ -9,9 +9,8 @@
     "menu": "Menu",
     "language": "Bahasa",
     "download": "Unduh untuk Android",
-    "preview": "Pratinjau APK Android",
+    "preview": "Unduh APK Android",
     "features": "Jelajahi fitur",
-    "pending": "Segera hadir",
     "alt": "Tampilan Beranda dan Kalender Routina pada dua ponsel biru",
     "loading": "Memuat gambar…",
     "failed": "Gambar belum tersedia",
@@ -30,7 +29,7 @@
     "Jalani hari",
     "lebih teratur."
   ],
-  "platform": "Android 7.0+  /  Pratinjau rilis",
+  "platform": "Android 7.0+  /  Rilis publik",
   "overview": {
     "label": "Sekilas Routina",
     "title": "Satu aplikasi untuk agenda harianmu.",
@@ -161,7 +160,7 @@
     "items": [
       [
         "Unduh APK",
-        "Setelah rilis publik tersedia, unduh paket Android resmi dari halaman ini."
+        "Unduh paket Android resmi langsung dari halaman ini."
       ],
       [
         "Pasang di Android",
@@ -176,12 +175,14 @@
   "download": {
     "label": "Unduhan Android",
     "title": "Siap menata harimu?",
-    "body": "Routina untuk Android masih dalam tahap pratinjau. Unduhan publik akan dibuka setelah rilis disetujui.",
-    "candidate": "Kandidat Android bertanda tangan",
+    "body": "Routina 1.0.0 tersedia sebagai APK Android bertanda tangan dan dapat digunakan secara offline.",
+    "candidate": "Rilis Android resmi",
     "bytes": "byte",
     "build": "Build",
     "checksum": "Lihat SHA-256",
-    "notes": "Catatan rilis belum tersedia"
+    "checksumFile": "Unduh checksum",
+    "releaseNotes": "Catatan rilis",
+    "notes": "Rilis awal · 19 November 2026"
   },
   "faq": {
     "label": "Tanya jawab",
@@ -205,7 +206,7 @@
       ],
       [
         "Bagaimana cara memasang Routina di Android?",
-        "Setelah tersedia, unduh APK resmi. Buka file tersebut lalu ikuti petunjuk pemasangan dan pemeriksaan keamanan Android."
+        "Unduh APK resmi dari halaman ini. Buka file tersebut lalu ikuti petunjuk pemasangan dan pemeriksaan keamanan Android."
       ],
       [
         "Bagaimana cara mencadangkan data?",
@@ -228,7 +229,7 @@
   "footer": {
     "by": "oleh Rega Code",
     "download": "Unduh",
-    "pending": "Tautan segera tersedia",
+    "pending": "APK tersedia",
     "links": [
       "Kebijakan Privasi",
       "Ketentuan Penggunaan",

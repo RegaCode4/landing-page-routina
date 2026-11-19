@@ -46,7 +46,7 @@ Delapan frame pendukung membentuk pustaka desain.
 | 08 · Privacy & Offline | Database lokal, penggunaan offline tanpa akun, ekspor backup manual terenkripsi dengan kata sandi, serta lokasi penyimpanan pilihan pengguna. Klaim enkripsi berlaku pada file backup. |
 | 09 · App Screenshots | Home, Calendar, To-Do List, Routines, Statistics. Judul galeri memberi tahu pembaca bahwa layar menampilkan data contoh. |
 | 10 · How It Works | Sesudah publikasi, unduh APK resmi, ikuti installer serta pemeriksaan keamanan Android, lalu atur jam aktif dan agenda. |
-| 11 · Download | Status kandidat, tombol Coming soon nonaktif, versi, build, byte, OS minimum, panel SHA-256, dan status release notes. |
+| 11 · Download | Tombol unduh APK aktif, versi, build, byte, OS minimum, panel SHA-256, file checksum, dan catatan rilis. |
 | 12 · FAQ | Delapan jawaban membahas produk, harga, offline, akun, instalasi, backup, update, dan iOS. Harga publik belum diumumkan. Pengujian upgrade signed dan iOS native masih tertunda. |
 | 13 · Final CTA | Ajakan singkat dengan satu mockup Statistik yang terpotong secara editorial. CTA kembali ke informasi kandidat. |
 | 14 · Footer | Routina by Rega Code, lima anchor halaman, serta slot Privacy Policy, Terms of Use, Release Notes, dan Contact berlabel pending. |
@@ -133,9 +133,9 @@ Gunakan anchor untuk navigasi, disclosure native untuk FAQ dan checksum, serta o
 | Ukuran | 64.321.176 byte, sekitar 61,34 MiB |
 | SHA-256 APK | `c625d6afc34034258aa00fae7b241f8f2f7f5df234af18f7c335a1d90dcb5e1e` |
 
-Selama kandidat privat, CTA aktif di hero dan header hanya menuju detail preview. Kontrol file berlabel Coming soon tetap disabled. Release notes dan tujuan footer menunggu URL asli.
+Pada rilis publik 19 November 2026, CTA hero dan header menuju bagian unduhan. Tombol unduh mengambil APK bertanda tangan dari URL versi yang immutable, disertai file checksum dan catatan rilis.
 
-Sebelum aktivasi, pemilik menyetujui distribusi dan melengkapi gerbang rilis Android, termasuk bukti upgrade signed yang masih tertunda. Ambil versi, build, minimum OS, ABI, ukuran, dan checksum dari artefak final yang sama. Cocokkan signature dengan register pemilik. Siapkan catatan versi, tanggal publikasi nyata, kontak dan dokumen privasi. Verifikasi kembali byte dan SHA-256 dari URL HTTPS resmi yang immutable. Setelah bukti cocok, aktifkan unduhan atas tindakan pengguna dengan label Download APK for Android dan sediakan file checksum. Tampilkan checksum sebagai satu nilai yang dapat disalin walau desain melipatnya menjadi empat baris.
+Pemilik menyetujui distribusi langsung pada 19 November 2026. Versi, build, minimum OS, ukuran, signature, dan checksum diambil dari artefak final yang sama. Catatan versi, tanggal publikasi, kontak, URL unduhan immutable, dan file checksum tersedia. Uji upgrade signed tetap dicatat sebagai tindak lanjut sebelum menerbitkan build pembaruan berikutnya.
 
 ### Keputusan pemilik yang masih terbuka
 

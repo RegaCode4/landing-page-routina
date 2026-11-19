@@ -180,6 +180,8 @@ routina-image img { display: block; width: 100%; height: 100%; object-fit: conta
 .download { background: #ed7957; }
 .download .intro { color: var(--ink); }
 .download .btn, .closing .btn { margin-top: 28px; }
+.release-links { margin-top: 18px; font-weight: 700; }
+.release-links a { text-decoration: underline; text-underline-offset: 4px; }
 .candidate .mono { margin-bottom: 24px; }
 .questions details, .checksum { border-bottom: 1px solid var(--rule); }
 .questions summary, .checksum summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px; min-height: 64px; font-size: 1.125rem; font-weight: 700; }

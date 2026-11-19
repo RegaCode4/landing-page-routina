@@ -9,9 +9,8 @@
     "menu": "Menu",
     "language": "Language",
     "download": "Download for Android",
-    "preview": "Preview Android APK",
+    "preview": "Download Android APK",
     "features": "Explore features",
-    "pending": "Coming soon",
     "alt": "Routina Home and Calendar on two blue phones",
     "loading": "Loading image…",
     "failed": "Image unavailable",
@@ -30,7 +29,7 @@
     "Make every",
     "day count."
   ],
-  "platform": "Android 7.0+  /  Release preview",
+  "platform": "Android 7.0+  /  Public release",
   "overview": {
     "label": "Product overview",
     "title": "One app. A more organized day.",
@@ -161,7 +160,7 @@
     "items": [
       [
         "Download the APK",
-        "Once the public release is available, get the official Android package here."
+        "Get the official Android package directly from this page."
       ],
       [
         "Install on Android",
@@ -176,12 +175,14 @@
   "download": {
     "label": "Android download",
     "title": "Ready for a more organized day?",
-    "body": "Routina for Android is in release preview. The public download opens after approval.",
-    "candidate": "Signed Android candidate",
+    "body": "Routina 1.0.0 is available as a signed Android APK and works offline.",
+    "candidate": "Official Android release",
     "bytes": "bytes",
     "build": "Build",
     "checksum": "View SHA-256",
-    "notes": "Release notes pending"
+    "checksumFile": "Download checksum",
+    "releaseNotes": "Release notes",
+    "notes": "Initial release · 19 November 2026"
   },
   "faq": {
     "label": "FAQ",
@@ -205,7 +206,7 @@
       ],
       [
         "How do I install it on Android?",
-        "Once published, download the official APK. Open it and follow the Android installer and its security checks."
+        "Download the official APK from this page. Open it and follow the Android installer and its security checks."
       ],
       [
         "How do backups work?",
@@ -228,7 +229,7 @@
   "footer": {
     "by": "by Rega Code",
     "download": "Download",
-    "pending": "Destinations pending",
+    "pending": "APK available",
     "links": [
       "Privacy Policy",
       "Terms of Use",

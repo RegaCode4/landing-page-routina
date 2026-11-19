@@ -12,6 +12,6 @@ Pemilik melaporkan pengujian pada Oppo A95 dengan semua alur berhasil. Versi And
 
 APK lokal 1.0.0 build 1 memiliki 64.321.176 byte dan SHA-256 c625d6afc34034258aa00fae7b241f8f2f7f5df234af18f7c335a1d90dcb5e1e. Pemeriksaan ulang checksum dan apksigner berhasil, dengan fingerprint sertifikat c52104a534d73f1da34b5045ce32678b01023fc11eb799c9ae471d03ed2b08fc.
 
-Manifest kandidat masih mencatat PENDING_RELEASE_CHECKLIST. Uji upgrade signed, runtime 16 KiB dan overflow onboarding 320 dp dengan teks 200% masih tercatat terbuka dalam audit aplikasi. Kontak telah tersedia. Kebijakan privasi dan catatan rilis perlu diselesaikan sebelum aktivasi unduhan publik.
+Pada 19 November 2026 pemilik menginstruksikan aktivasi unduhan publik. APK bertanda tangan tersebut dipublikasikan sebagai `/downloads/routina-1.0.0-1-universal.apk`, disertai checksum dan catatan rilis. Uji upgrade signed, runtime 16 KiB dan overflow onboarding 320 dp dengan teks 200% tetap tercatat sebagai tindak lanjut untuk rilis berikutnya.
 
 Domain `routina.web.id` terhubung ke environment Production Vercel melalui record `A @ 216.198.79.1` di DNS Management IDwebhost. Resolver publik mengembalikan alamat tersebut dengan TTL 3600. HTTPS aktif dengan HSTS, root mengarahkan permanen ke `/en/`, halaman `/id/` tersedia, dan canonical, Open Graph, robots serta sitemap memakai domain resmi.

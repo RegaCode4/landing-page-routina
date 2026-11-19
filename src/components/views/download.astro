@@ -11,7 +11,9 @@ const { t, lang } = Astro.props;
   <ol class="thirds steps">{t.steps.items.map(([title, body], i) => <li><span class="eyebrow" aria-hidden="true">0{i+1}</span><h3>{title}</h3><p>{body}</p></li>)}</ol>
 </div></section>
 <section class="band download" id="download"><div class="wrap split">
-  <div><Heading {...t.download} /><button class="btn disabled" disabled>{t.ui.pending}</button></div>
+  <div><Heading {...t.download} /><a class="btn primary" href={candidate.url} download={candidate.filename}>{t.ui.download}</a>
+    <p class="release-links"><a href={candidate.checksumUrl} download>{t.download.checksumFile}</a><span aria-hidden="true"> · </span><a href={candidate.releaseNotesUrl}>{t.download.releaseNotes}</a></p>
+  </div>
   <article class="candidate"><p class="eyebrow">{t.download.candidate}</p><h3>Routina {candidate.version}</h3>
     <p class="mono">{t.download.build} {candidate.build} · Android {candidate.android}<br/>{candidate.bytes.toLocaleString(lang === "id" ? "id-ID" : "en-US")} {t.download.bytes}</p>
     <details class="checksum"><summary>{t.download.checksum}</summary><code>{candidate.sha256}</code></details>
