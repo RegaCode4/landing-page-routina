@@ -1,0 +1,12 @@
+---
+import type { Dictionary } from "@/common/i18n";
+import Brand from "@/components/ui/brand.astro";
+interface Props { t: Dictionary }
+const { t } = Astro.props;
+const links = [["home",t.nav[0]],["features",t.nav[1]],["how-it-works",t.nav[2]],["faq",t.nav[4]],["download",t.footer.download]];
+---
+<footer class="cream"><div class="wrap footer-grid">
+  <div><Brand /><p>{t.footer.by}</p></div>
+  <nav aria-label={t.ui.nav}>{links.map(([id,label]) => <a href={`#${id}`}>{label}</a>)}</nav>
+  <div><p class="eyebrow">{t.footer.pending}</p><ul>{t.footer.links.map(label => <li>{label}</li>)}</ul></div>
+</div></footer>

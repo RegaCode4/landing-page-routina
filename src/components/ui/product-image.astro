@@ -1,0 +1,36 @@
+---
+import type { Dictionary } from "@/common/i18n";
+interface Props { src: string; alt: string; width: number; height: number; ui: Dictionary["ui"]; srcset?: string; sizes?: string; priority?: boolean }
+const { src, alt, width, height, ui, srcset, sizes, priority = false } = Astro.props;
+---
+<routina-image style={`aspect-ratio:${width}/${height}`}>
+  <img {src} {alt} {width} {height} {srcset} {sizes} loading={priority ? "eager" : "lazy"} fetchpriority={priority ? "high" : "auto"} decoding="async" />
+  <div class="image-status" hidden>
+    <span role="status" data-error={ui.failed} data-loading={ui.loading}></span>
+    <button type="button">{ui.retry}</button>
+  </div>
+</routina-image>
+<script>
+  class ProductImage extends HTMLElement {
+    connectedCallback() {
+      const image = this.querySelector("img")!;
+      const panel = this.querySelector<HTMLElement>(".image-status")!;
+      const message = panel.querySelector("span")!;
+      const retry = panel.querySelector("button")!;
+      const failed = () => {
+        panel.hidden = false;
+        message.textContent = message.dataset.error ?? "";
+        retry.disabled = false;
+      };
+      image.addEventListener("error", failed);
+      image.addEventListener("load", () => { panel.hidden = true; });
+      retry.addEventListener("click", () => {
+        retry.disabled = true;
+        message.textContent = message.dataset.loading ?? "";
+        image.src = image.src;
+      });
+      if (image.complete && !image.naturalWidth) failed();
+    }
+  }
+  customElements.define("routina-image", ProductImage);
+</script>

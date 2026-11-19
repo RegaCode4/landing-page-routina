@@ -1,0 +1,27 @@
+---
+import { candidate } from "@/common/release";
+import type { AppLocale, Dictionary } from "@/common/i18n";
+import Heading from "@/components/ui/heading.astro";
+import Phone from "@/components/ui/phone.astro";
+interface Props { t: Dictionary; lang: AppLocale }
+const { t, lang } = Astro.props;
+---
+<section class="band cream" id="how-it-works"><div class="wrap">
+  <Heading {...t.steps} />
+  <ol class="thirds steps">{t.steps.items.map(([title, body], i) => <li><span class="eyebrow" aria-hidden="true">0{i+1}</span><h3>{title}</h3><p>{body}</p></li>)}</ol>
+</div></section>
+<section class="band download" id="download"><div class="wrap split">
+  <div><Heading {...t.download} /><button class="btn disabled" disabled>{t.ui.pending}</button></div>
+  <article class="candidate"><p class="eyebrow">{t.download.candidate}</p><h3>Routina {candidate.version}</h3>
+    <p class="mono">{t.download.build} {candidate.build} · Android {candidate.android}<br/>{candidate.bytes.toLocaleString(lang === "id" ? "id-ID" : "en-US")} {t.download.bytes}</p>
+    <details class="checksum"><summary>{t.download.checksum}</summary><code>{candidate.sha256}</code></details>
+    <p class="muted">{t.download.notes}</p>
+  </article>
+</div></section>
+<section class="band cream" id="faq"><div class="wrap">
+  <Heading {...t.faq} />
+  <div class="questions">{t.faq.items.map(([question, answer], i) => <details open={i === 0}><summary>{question}</summary><p>{answer}</p></details>)}</div>
+</div></section>
+<section class="dark closing"><div class="wrap split"><div><Heading {...t.end} /><a class="btn primary" href="#download">{t.ui.preview}</a></div>
+  <div class="closing-art"><Phone screen="statistics" caption={t.gallery.names[4]} ui={t.ui} /></div>
+</div></section>

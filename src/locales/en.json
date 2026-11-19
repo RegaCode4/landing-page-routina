@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "title": "Routina — Your offline daily planner",
+    "description": "Plan your schedule, tasks, and routines in one offline-first Android app."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "nav": "Main navigation",
+    "menu": "Menu",
+    "language": "Language",
+    "download": "Download for Android",
+    "preview": "Preview Android APK",
+    "features": "Explore features",
+    "pending": "Coming soon",
+    "alt": "Routina Home and Calendar on two blue phones",
+    "loading": "Loading image…",
+    "failed": "Image unavailable",
+    "retry": "Try again",
+    "screen": "Routina screen",
+    "galleryNav": "Choose a screen"
+  },
+  "nav": [
+    "Home",
+    "Features",
+    "How it works",
+    "Screenshots",
+    "FAQ"
+  ],
+  "hero": [
+    "Make every",
+    "day count."
+  ],
+  "platform": "Android 7.0+  /  Release preview",
+  "overview": {
+    "label": "Product overview",
+    "title": "One app. A more organized day.",
+    "items": [
+      [
+        "Plan your time",
+        "See your commitments together."
+      ],
+      [
+        "Stay on top of tasks",
+        "Keep deadlines and next steps in view."
+      ],
+      [
+        "Build a routine",
+        "Make time for habits that matter."
+      ]
+    ]
+  },
+  "features": {
+    "label": "Main features",
+    "title": "Tools for the day ahead.",
+    "items": [
+      [
+        "Smart Calendar",
+        "Move between month, week, and day views."
+      ],
+      [
+        "To-Do List",
+        "Break a task into smaller steps and track its deadline."
+      ],
+      [
+        "Daily routines",
+        "Set goals and record time spent."
+      ],
+      [
+        "Smart Scheduling",
+        "Review available slots for your tasks."
+      ],
+      [
+        "Productivity statistics",
+        "Compare activity over time."
+      ],
+      [
+        "Local reminders",
+        "Choose when your device reminds you."
+      ]
+    ]
+  },
+  "spot": {
+    "label": "Smart Scheduling",
+    "phrases": ["Find time", "for what", "matters."],
+    "body": "Routina weighs your active hours, existing plans, task deadline, and estimated work time.",
+    "note": "You review each slot and approve it before Routina adds it to your schedule.",
+    "demo": "Suggested slot / Demo",
+    "study": "Study session",
+    "approve": "Review & approve"
+  },
+  "routine": {
+    "label": "Routine tracking",
+    "title": "Build a rhythm that fits your day.",
+    "body": "Set a goal for study or exercise. Start the timer when you begin, then see how the time you actually spent compares with your plan.",
+    "demo": "Routine log / Demo",
+    "actual": "Actual time / Study",
+    "items": [
+      [
+        "Study session",
+        "24 / 30 min"
+      ],
+      [
+        "Morning workout",
+        "2 / 3 sessions"
+      ]
+    ]
+  },
+  "stats": {
+    "label": "Productivity statistics",
+    "title": "See your progress clearly.",
+    "body": "Review daily, weekly, or monthly activity. Figures below are a weekly demo.",
+    "items": [
+      [
+        "21 / 29",
+        "Activities completed"
+      ],
+      [
+        "72.4%",
+        "Completion rate"
+      ],
+      [
+        "2 / 3",
+        "Routine goals reached"
+      ]
+    ]
+  },
+  "privacy": {
+    "label": "Privacy & offline",
+    "title": "Your plans. Your device.",
+    "body": "Your planner works locally, without an online account.",
+    "items": [
+      [
+        "Local storage",
+        "Your planner data stays in the app’s local database."
+      ],
+      [
+        "No login required",
+        "Open the offline planner and start with your own schedule."
+      ],
+      [
+        "Encrypted manual backup",
+        "Choose a password and where to export your backup. Restore it when you need it."
+      ]
+    ]
+  },
+  "gallery": {
+    "label": "App screenshots",
+    "title": "A closer look at Routina.",
+    "body": "Original app designs with sample planner data.",
+    "names": [
+      "Home",
+      "Calendar",
+      "To-Do List",
+      "Routines",
+      "Statistics"
+    ]
+  },
+  "steps": {
+    "label": "How it works",
+    "title": "Get started in three steps.",
+    "items": [
+      [
+        "Download the APK",
+        "Once the public release is available, get the official Android package here."
+      ],
+      [
+        "Install on Android",
+        "Open the APK and follow Android’s installer and device security checks."
+      ],
+      [
+        "Plan your day",
+        "Set your active hours, add a task, and make room for your first routine."
+      ]
+    ]
+  },
+  "download": {
+    "label": "Android download",
+    "title": "Ready for a more organized day?",
+    "body": "Routina for Android is in release preview. The public download opens after approval.",
+    "candidate": "Signed Android candidate",
+    "bytes": "bytes",
+    "build": "Build",
+    "checksum": "View SHA-256",
+    "notes": "Release notes pending"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions.",
+    "items": [
+      [
+        "What is Routina?",
+        "Routina is an offline-first Android planner for your calendar, tasks, and daily routines."
+      ],
+      [
+        "Is Routina free to use?",
+        "Pricing for the public release has yet to be announced."
+      ],
+      [
+        "Does Routina work offline?",
+        "Yes. Plan your day, run routine timers, and review your progress using data on your device."
+      ],
+      [
+        "Do I need an account?",
+        "The offline version works without an online account."
+      ],
+      [
+        "How do I install it on Android?",
+        "Once published, download the official APK. Open it and follow the Android installer and its security checks."
+      ],
+      [
+        "How do backups work?",
+        "Choose a password and export an encrypted backup to a location you control. Restore it with the file and its password."
+      ],
+      [
+        "Will an update keep my data?",
+        "Back up first. Updates require a compatible signed APK with a higher version code. Signed upgrade testing is pending."
+      ],
+      [
+        "Is Routina available on iOS?",
+        "This preview is for Android. Native iOS testing is pending."
+      ]
+    ]
+  },
+  "end": {
+    "label": "Routina for Android",
+    "title": "Make room for your next good day."
+  },
+  "footer": {
+    "by": "by Rega Code",
+    "download": "Download",
+    "pending": "Destinations pending",
+    "links": [
+      "Privacy Policy",
+      "Terms of Use",
+      "Release Notes",
+      "Contact"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+---
+const paths = {
+  calendar: "M3 6h18v15H3z M3 10h18 M7 3v5 M17 3v5 M7 14h3 M13 14h3",
+  tasks: "M3 4h18v17H3z M7 12l4 4 6-8",
+  routines: "M3 11a9 9 0 0 1 16-5l2 2 M21 3v5h-5 M21 13a9 9 0 0 1-16 5l-2-2 M3 21v-5h5",
+  slot: "M3 4h18v6H3z M3 15h10v5H3z M18 14v7 M15 17.5h6",
+  statistics: "M3 3v18h18 M7 17v-5 M12 17V6 M17 17V9",
+  bell: "M4 17h16c-2-2-2-4-2-7a6 6 0 0 0-12 0c0 3 0 5-2 7z M10 20q2 3 4 0",
+  lock: "M5 10h14v11H5z M8 10V7a4 4 0 0 1 8 0v3 M12 14v3",
+  account: "M8 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0z M4 21c0-9 16-9 16 0",
+  backup: "M3 13v8h18v-8 M12 3v12 M7 10l5 5 5-5",
+};
+interface Props { name: keyof typeof paths }
+---
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[Astro.props.name]} /></svg>

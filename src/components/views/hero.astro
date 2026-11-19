@@ -1,0 +1,17 @@
+---
+import type { Dictionary } from "@/common/i18n";
+import ProductImage from "@/components/ui/product-image.astro";
+import small from "../../../design/assets/web/mockupphone-800.webp?url";
+import large from "../../../design/assets/web/mockupphone-1447.webp?url";
+interface Props { t: Dictionary }
+const { t } = Astro.props;
+---
+<section class="hero">
+  <div class="hero-copy wrap">
+    <h1>{t.hero.map((line, i) => <span class="mask"><span style={`--delay:${i ? 750 : 240}ms`}>{line}</span>{" "}</span>)}</h1>
+    <p>{t.meta.description}</p>
+    <div class="hero-actions"><a class="btn primary" href="#download">{t.ui.preview}</a><a class="btn outline" href="#features">{t.ui.features}</a></div>
+    <small class="eyebrow">{t.platform}</small>
+  </div>
+  <div class="hero-art"><ProductImage src={large} srcset={`${small} 800w, ${large} 1447w`} sizes="(max-width: 767px) 100vw, (max-width: 1099px) 740px, 642px" alt={t.ui.alt} width={1447} height={1087} ui={t.ui} priority /></div>
+</section>

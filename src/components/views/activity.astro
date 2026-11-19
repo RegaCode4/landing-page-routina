@@ -1,0 +1,45 @@
+---
+import type { Dictionary } from "@/common/i18n";
+import Heading from "@/components/ui/heading.astro";
+import Icon from "@/components/ui/icon.astro";
+interface Props { t: Dictionary }
+const { t } = Astro.props;
+const icons = ["lock", "account", "backup"] as const;
+---
+<section class="band dark spotlight"><div class="wrap split">
+  <div>
+    <header class="section-heading">
+      <p class="eyebrow">{t.spot.label}</p>
+      <h2>{t.spot.phrases.map((phrase, i) => <><span style={`--phrase-delay:${i * 140}ms`}>{phrase}</span>{" "}</>)}</h2>
+      <p class="intro">{t.spot.body}</p>
+    </header>
+    <p class="secondary-copy">{t.spot.note}</p>
+  </div>
+  <figure class="slot-card"><figcaption class="eyebrow">{t.spot.demo}</figcaption><h3>{t.spot.study}</h3><strong class="mono">15:00 — 15:45</strong><div class="slot-approval"><span>{t.spot.approve}</span></div></figure>
+</div></section>
+<script>
+  const spotlight = document.querySelector(".spotlight h2");
+  if (spotlight && "IntersectionObserver" in window && matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        spotlight.classList.add("reveal");
+        observer.disconnect();
+      }
+    });
+    observer.observe(spotlight);
+  }
+</script>
+<section class="band cream routine"><div class="wrap split">
+  <Heading {...t.routine} />
+  <figure class="routine-card"><figcaption class="eyebrow">{t.routine.demo}</figcaption><strong class="timer mono">00:24:00</strong><p class="eyebrow">{t.routine.actual}</p>
+    {t.routine.items.map(([title, value], i) => <div class="routine-row"><div><b>{title}</b><span class="mono">{value}</span></div><span class="track" aria-hidden="true"><i style={`width:${i ? 66.67 : 80}%`}></i></span></div>)}
+  </figure>
+</div></section>
+<section class="band stats"><div class="wrap">
+  <Heading {...t.stats} />
+  <dl class="thirds metrics">{t.stats.items.map(([value, title]) => <div><dt>{title}</dt><dd>{value}</dd></div>)}</dl>
+</div></section>
+<section class="band privacy"><div class="wrap">
+  <Heading {...t.privacy} />
+  <div class="thirds">{t.privacy.items.map(([title, body], i) => <article><Icon name={icons[i]} /><h3>{title}</h3><p>{body}</p></article>)}</div>
+</div></section>

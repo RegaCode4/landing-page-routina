@@ -1,0 +1,8 @@
+---
+import { screens, type Screen } from "@/common/assets";
+import type { Dictionary } from "@/common/i18n";
+import ProductImage from "./product-image.astro";
+interface Props { screen: Screen; caption: string; ui: Dictionary["ui"] }
+const { screen, caption, ui } = Astro.props;
+---
+<div class="phone"><ProductImage src={screens[screen]} alt={`${ui.screen} · ${caption}`} width={585} height={1266} {ui} /></div>

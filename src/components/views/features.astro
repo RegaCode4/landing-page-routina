@@ -1,0 +1,25 @@
+---
+import type { Dictionary } from "@/common/i18n";
+import Heading from "@/components/ui/heading.astro";
+import Icon from "@/components/ui/icon.astro";
+import Phone from "@/components/ui/phone.astro";
+interface Props { t: Dictionary }
+const { t } = Astro.props;
+const overviewIcons = ["calendar", "tasks", "routines"] as const;
+const featureIcons = ["routines", "slot", "statistics", "bell"] as const;
+---
+<section class="band cream"><div class="wrap">
+  <Heading {...t.overview} />
+  <div class="thirds overview">{t.overview.items.map(([title, body], i) =>
+    <article><Icon name={overviewIcons[i]} /><h3>{title}</h3><p>{body}</p></article>)}</div>
+</div></section>
+<section class="band features" id="features"><div class="wrap">
+  <Heading {...t.features} />
+  <div class="feature-grid">
+    {t.features.items.map(([title, body], i) => i < 2 ? (
+      <article class="highlight"><h3>{title}</h3><p>{body}</p><Phone screen={i === 0 ? "calendar" : "tasks"} caption={title} ui={t.ui} /></article>
+    ) : (
+      <article class="feature-small"><Icon name={featureIcons[i-2]} /><h3>{title}</h3><p>{body}</p></article>
+    ))}
+  </div>
+</div></section>

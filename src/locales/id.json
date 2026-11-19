@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "title": "Routina — Agenda harian offline",
+    "description": "Atur jadwal, tugas, dan rutinitas dalam satu aplikasi Android yang bisa dipakai offline."
+  },
+  "ui": {
+    "skip": "Langsung ke konten",
+    "nav": "Navigasi utama",
+    "menu": "Menu",
+    "language": "Bahasa",
+    "download": "Unduh untuk Android",
+    "preview": "Pratinjau APK Android",
+    "features": "Jelajahi fitur",
+    "pending": "Segera hadir",
+    "alt": "Tampilan Beranda dan Kalender Routina pada dua ponsel biru",
+    "loading": "Memuat gambar…",
+    "failed": "Gambar belum tersedia",
+    "retry": "Coba lagi",
+    "screen": "Layar Routina",
+    "galleryNav": "Pilih layar aplikasi"
+  },
+  "nav": [
+    "Beranda",
+    "Fitur",
+    "Cara kerja",
+    "Galeri",
+    "Tanya jawab"
+  ],
+  "hero": [
+    "Jalani hari",
+    "lebih teratur."
+  ],
+  "platform": "Android 7.0+  /  Pratinjau rilis",
+  "overview": {
+    "label": "Sekilas Routina",
+    "title": "Satu aplikasi untuk agenda harianmu.",
+    "items": [
+      [
+        "Atur waktumu",
+        "Lihat semua kegiatan yang sudah kamu jadwalkan."
+      ],
+      [
+        "Pantau tugas",
+        "Ketahui tenggat dan langkah berikutnya."
+      ],
+      [
+        "Bangun rutinitas",
+        "Sisihkan waktu untuk kebiasaan yang ingin kamu jaga."
+      ]
+    ]
+  },
+  "features": {
+    "label": "Fitur utama",
+    "title": "Bekal untuk menjalani hari.",
+    "items": [
+      [
+        "Kalender",
+        "Lihat agenda per bulan, minggu, atau hari."
+      ],
+      [
+        "Daftar tugas",
+        "Pecah tugas menjadi langkah kecil dan pantau tenggatnya."
+      ],
+      [
+        "Rutinitas harian",
+        "Tetapkan target dan catat waktu yang kamu gunakan."
+      ],
+      [
+        "Penjadwalan cerdas",
+        "Tinjau pilihan waktu kosong untuk mengerjakan tugas."
+      ],
+      [
+        "Statistik produktivitas",
+        "Bandingkan aktivitasmu dari waktu ke waktu."
+      ],
+      [
+        "Pengingat lokal",
+        "Pilih kapan perangkat perlu mengingatkanmu."
+      ]
+    ]
+  },
+  "spot": {
+    "label": "Penjadwalan cerdas",
+    "phrases": ["Temukan waktu", "untuk hal", "penting."],
+    "body": "Routina mempertimbangkan jam aktif, agenda, tenggat tugas, dan perkiraan waktu pengerjaan.",
+    "note": "Kamu meninjau dan menyetujui setiap usulan sebelum Routina menambahkannya ke jadwal.",
+    "demo": "Usulan waktu / Contoh",
+    "study": "Sesi belajar",
+    "approve": "Tinjau & setujui"
+  },
+  "routine": {
+    "label": "Catatan rutinitas",
+    "title": "Temukan ritme yang cocok untukmu.",
+    "body": "Tetapkan target belajar atau olahraga. Nyalakan timer saat mulai, lalu bandingkan waktu yang kamu gunakan dengan rencana awal.",
+    "demo": "Catatan rutinitas / Contoh",
+    "actual": "Waktu aktual / Belajar",
+    "items": [
+      [
+        "Sesi belajar",
+        "24 / 30 menit"
+      ],
+      [
+        "Olahraga pagi",
+        "2 / 3 sesi"
+      ]
+    ]
+  },
+  "stats": {
+    "label": "Statistik produktivitas",
+    "title": "Lihat kemajuanmu dengan jelas.",
+    "body": "Tinjau aktivitas per hari, minggu, atau bulan. Berikut contoh data untuk satu minggu.",
+    "items": [
+      [
+        "21 / 29",
+        "Aktivitas selesai"
+      ],
+      [
+        "72,4%",
+        "Tingkat penyelesaian"
+      ],
+      [
+        "2 / 3",
+        "Target rutinitas tercapai"
+      ]
+    ]
+  },
+  "privacy": {
+    "label": "Privasi & penggunaan offline",
+    "title": "Agendamu, di perangkatmu.",
+    "body": "Routina bekerja secara lokal tanpa akun online.",
+    "items": [
+      [
+        "Penyimpanan lokal",
+        "Data agenda tersimpan di basis data aplikasi pada perangkatmu."
+      ],
+      [
+        "Tanpa perlu masuk",
+        "Buka aplikasi dan langsung susun agendamu."
+      ],
+      [
+        "Cadangan manual terenkripsi",
+        "Pilih kata sandi dan lokasi ekspor cadangan. Pulihkan datanya saat diperlukan."
+      ]
+    ]
+  },
+  "gallery": {
+    "label": "Galeri aplikasi",
+    "title": "Lihat Routina lebih dekat.",
+    "body": "Desain asli aplikasi dengan contoh data agenda.",
+    "names": [
+      "Beranda",
+      "Kalender",
+      "Daftar tugas",
+      "Rutinitas",
+      "Statistik"
+    ]
+  },
+  "steps": {
+    "label": "Cara kerja",
+    "title": "Mulai dalam tiga langkah.",
+    "items": [
+      [
+        "Unduh APK",
+        "Setelah rilis publik tersedia, unduh paket Android resmi dari halaman ini."
+      ],
+      [
+        "Pasang di Android",
+        "Buka APK dan ikuti petunjuk pemasangan serta pemeriksaan keamanan Android."
+      ],
+      [
+        "Susun agendamu",
+        "Atur jam aktif, tambahkan tugas, lalu jadwalkan rutinitas pertamamu."
+      ]
+    ]
+  },
+  "download": {
+    "label": "Unduhan Android",
+    "title": "Siap menata harimu?",
+    "body": "Routina untuk Android masih dalam tahap pratinjau. Unduhan publik akan dibuka setelah rilis disetujui.",
+    "candidate": "Kandidat Android bertanda tangan",
+    "bytes": "byte",
+    "build": "Build",
+    "checksum": "Lihat SHA-256",
+    "notes": "Catatan rilis belum tersedia"
+  },
+  "faq": {
+    "label": "Tanya jawab",
+    "title": "Pertanyaan yang sering diajukan.",
+    "items": [
+      [
+        "Apa itu Routina?",
+        "Routina adalah aplikasi agenda Android yang bisa digunakan offline untuk mengatur jadwal, tugas, dan rutinitas harian."
+      ],
+      [
+        "Apakah Routina gratis?",
+        "Harga untuk rilis publik belum diumumkan."
+      ],
+      [
+        "Apakah Routina bisa dipakai offline?",
+        "Bisa. Kamu dapat menyusun agenda, menjalankan timer rutinitas, dan melihat kemajuan dengan data di perangkat."
+      ],
+      [
+        "Apakah saya perlu membuat akun?",
+        "Versi offline bisa digunakan tanpa akun online."
+      ],
+      [
+        "Bagaimana cara memasang Routina di Android?",
+        "Setelah tersedia, unduh APK resmi. Buka file tersebut lalu ikuti petunjuk pemasangan dan pemeriksaan keamanan Android."
+      ],
+      [
+        "Bagaimana cara mencadangkan data?",
+        "Pilih kata sandi dan ekspor cadangan terenkripsi ke lokasi pilihanmu. Untuk memulihkan data, gunakan file cadangan dan kata sandinya."
+      ],
+      [
+        "Apakah data saya tetap ada setelah pembaruan?",
+        "Cadangkan data terlebih dahulu. Pembaruan memerlukan APK bertanda tangan yang kompatibel dengan kode versi lebih tinggi. Pengujian pembaruan tersebut masih tertunda."
+      ],
+      [
+        "Apakah Routina tersedia untuk iOS?",
+        "Pratinjau ini untuk Android. Pengujian langsung di iOS masih tertunda."
+      ]
+    ]
+  },
+  "end": {
+    "label": "Routina untuk Android",
+    "title": "Luangkan waktu untuk hari yang lebih teratur."
+  },
+  "footer": {
+    "by": "oleh Rega Code",
+    "download": "Unduh",
+    "pending": "Tautan segera tersedia",
+    "links": [
+      "Kebijakan Privasi",
+      "Ketentuan Penggunaan",
+      "Catatan Rilis",
+      "Kontak"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # Routina Landing Page
 
-**Fase 21A · 18 November 2026 · siap ditinjau pemilik.** Buka halaman `Routina Landing Page` dalam [dokumen FigCraft website](../design/Routina%20Landing%20Page.figcraft). Mulai dari flow desktop atau pilih ukuran perangkat. Setiap frame utama memuat perjalanan lengkap sampai footer. [Pratinjau hero](../design/hero-preview.webp)
+**Desain final · implementasi Astro · 19 November 2026.** Buka halaman `Routina Landing Page` dalam [dokumen FigCraft website](../design/Routina%20Landing%20Page.figcraft). Website statis menyajikan 14 bagian di `/en/` dan `/id/`. Alamat `/` mengarah ke versi Inggris. [Pratinjau hero](../design/hero-preview.webp)
 
 ## Konsep dan keputusan editorial
 
@@ -139,7 +139,6 @@ Sebelum aktivasi, pemilik menyetujui distribusi dan melengkapi gerbang rilis And
 
 ### Keputusan pemilik yang masih terbuka
 
-1. Persetujuan desain website, termasuk copy Inggris, hero kobalt dan perlakuan warna Ember untuk website.
-2. Harga atau pernyataan publik mengenai biaya penggunaan.
-3. Domain resmi, kontak, kebijakan privasi, syarat penggunaan, serta tujuan release notes.
-4. Persetujuan dan tanggal publikasi Android dengan metadata final. Ketersediaan iOS menunggu bukti pengujian serta keputusan rilis platform tersebut.
+1. Harga atau pernyataan publik mengenai biaya penggunaan.
+2. Domain resmi, kontak, kebijakan privasi, syarat penggunaan, serta tujuan release notes.
+3. Persetujuan dan tanggal publikasi Android dengan metadata final. Ketersediaan iOS menunggu bukti pengujian serta keputusan rilis platform tersebut.

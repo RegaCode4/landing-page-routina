@@ -1,0 +1,15 @@
+---
+import type { Dictionary } from "@/common/i18n";
+import { screenOrder } from "@/common/assets";
+import Heading from "@/components/ui/heading.astro";
+import Phone from "@/components/ui/phone.astro";
+interface Props { t: Dictionary }
+const { t } = Astro.props;
+---
+<section class="band gallery" id="screenshots"><div class="wrap">
+  <Heading {...t.gallery} />
+  <div class="gallery-rail" tabindex="0" role="region" aria-label={t.gallery.label}>
+    {screenOrder.map((screen, i) => <figure id={`screen-${screen}`}><Phone {screen} caption={t.gallery.names[i]} ui={t.ui} /><figcaption>{t.gallery.names[i]}</figcaption></figure>)}
+  </div>
+  <nav class="gallery-nav" aria-label={t.ui.galleryNav}>{screenOrder.map((screen, i) => <a href={`#screen-${screen}`}>{t.gallery.names[i]}</a>)}</nav>
+</div></section>
