@@ -14,4 +14,4 @@ APK lokal 1.0.0 build 1 memiliki 64.321.176 byte dan SHA-256 c625d6afc34034258aa
 
 Manifest kandidat masih mencatat PENDING_RELEASE_CHECKLIST. Uji upgrade signed, runtime 16 KiB dan overflow onboarding 320 dp dengan teks 200% masih tercatat terbuka dalam audit aplikasi. Kontak telah tersedia. Kebijakan privasi dan catatan rilis perlu diselesaikan sebelum aktivasi unduhan publik.
 
-Konfigurasi DNS harus mengikuti nilai yang diberikan untuk proyek ini di Vercel. Pemeriksaan awal domain menghasilkan DNS server failure dan HTTPS belum dapat diakses.
+Domain `routina.web.id` terhubung ke environment Production Vercel melalui record `A @ 216.198.79.1` di DNS Management IDwebhost. Resolver publik mengembalikan alamat tersebut dengan TTL 3600. HTTPS aktif dengan HSTS, root mengarahkan permanen ke `/en/`, halaman `/id/` tersedia, dan canonical, Open Graph, robots serta sitemap memakai domain resmi.
