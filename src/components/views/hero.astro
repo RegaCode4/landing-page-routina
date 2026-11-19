@@ -13,5 +13,5 @@ const { t } = Astro.props;
     <div class="hero-actions"><a class="btn primary" href="#download">{t.ui.preview}</a><a class="btn outline" href="#features">{t.ui.features}</a></div>
     <small class="eyebrow">{t.platform}</small>
   </div>
-  <div class="hero-art"><ProductImage src={large} srcset={`${small} 800w, ${large} 1447w`} sizes="(max-width: 767px) 100vw, (max-width: 1099px) 740px, 642px" alt={t.ui.alt} width={1447} height={1087} ui={t.ui} priority /></div>
+  <div class="hero-art"><ProductImage src={large} srcset={`${small} 800w, ${large} 1447w`} sizes="(min-width: 650px) and (max-height: 510px) 50vw, (max-width: 900px) 100vw, 900px" alt={t.ui.alt} width={1447} height={1087} ui={t.ui} priority /></div>
 </section>

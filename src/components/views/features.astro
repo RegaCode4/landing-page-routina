@@ -17,7 +17,13 @@ const featureIcons = ["routines", "slot", "statistics", "bell"] as const;
   <Heading {...t.features} />
   <div class="feature-grid">
     {t.features.items.map(([title, body], i) => i < 2 ? (
-      <article class="highlight"><h3>{title}</h3><p>{body}</p><Phone screen={i === 0 ? "calendar" : "tasks"} caption={title} ui={t.ui} /></article>
+      <article class="highlight">
+        <h3>{title}</h3>
+        <p>{body}</p>
+        <div class="feature-art">
+          <Phone screen={i === 0 ? "calendar" : "tasks"} caption={title} ui={t.ui} />
+        </div>
+      </article>
     ) : (
       <article class="feature-small"><Icon name={featureIcons[i-2]} /><h3>{title}</h3><p>{body}</p></article>
     ))}

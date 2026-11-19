@@ -21,6 +21,10 @@ const { t, lang } = Astro.props;
   </nav>
 </header>
 <script>
+  const masthead = document.querySelector<HTMLElement>(".masthead")!;
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty("--masthead-height", `${masthead.offsetHeight}px`);
+  }).observe(masthead);
   const menu = document.querySelector<HTMLDetailsElement>(".menu")!;
   document.addEventListener("click", event => {
     const target = event.target;
