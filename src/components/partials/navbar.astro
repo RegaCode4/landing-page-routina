@@ -5,7 +5,7 @@ interface Props { t: Dictionary; lang: AppLocale }
 const { t, lang } = Astro.props;
 ---
 <header class="masthead">
-  <nav class="wrap nav-row" aria-label={t.ui.nav}>
+  <nav class="nav-row" aria-label={t.ui.nav}>
     <Brand />
     <div class="nav-links">{navIds.map((id, i) => <a href={`#${id}`}>{t.nav[i]}</a>)}</div>
     <div class="nav-tools">

@@ -67,7 +67,14 @@ main > section {
 .brand, .nav-row, .nav-tools, .nav-links, .languages { display: flex; align-items: center; }
 .brand { width: max-content; gap: 8px; font-size: 1.65rem; font-weight: 750; letter-spacing: -.055em; }
 .masthead { position: sticky; z-index: 10; top: 0; background: white; }
-.nav-row { min-height: 76px; justify-content: space-between; gap: 8px; flex-wrap: wrap; position: relative; }
+.nav-row {
+  margin-inline: clamp(12px, 2vw, 32px);
+  min-height: 76px;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
 .nav-tools { gap: 12px; }
 .languages { gap: 0; }
 .languages a { display: grid; place-items: center; min-width: 44px; min-height: 44px; font: .8125rem "Space Mono", monospace; }
