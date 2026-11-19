@@ -10,6 +10,8 @@ Tujuh gambar Finorix dalam folder referensi menjadi acuan untuk kartu fitur deng
 
 ## Frame dan QA responsif
 
+Tepi atas bidang ubin membaur ke putih melalui gradasi vertikal di belakang mockup. Tinggi transisi 145 px pada desktop, 120 px pada tablet, 76 px pada ponsel, dan 86 px pada studi animasi. Ujung atasnya putih penuh dan ujung bawahnya transparan.
+
 | Frame | Ukuran desain (px) | Hasil review |
 | --- | --- | --- |
 | `WEB_01_Desktop_1440` | 1440 × 7834 | Navigasi penuh, hero terpusat di atas mockup, dua kartu besar dan empat kartu pendukung sebaris, lima layar galeri terlihat. [Render](../design/review/layout-1440.webp) |
