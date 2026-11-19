@@ -14,12 +14,12 @@ Tepi atas bidang ubin membaur ke putih melalui gradasi vertikal di belakang mock
 
 | Frame | Ukuran desain (px) | Hasil review |
 | --- | --- | --- |
-| `WEB_01_Desktop_1440` | 1440 × 7834 | Navigasi penuh, hero terpusat di atas mockup, dua kartu besar dan empat kartu pendukung sebaris, lima layar galeri terlihat. [Render](../design/review/layout-1440.webp) |
-| `WEB_02_Tablet_768` | 768 × 8162 | Menu ringkas, ponsel di bawah copy hero, kartu pendukung dua kolom, spotlight dan unduhan bertumpuk. [Render](../design/review/layout-768.webp) |
-| `WEB_03_Mobile_390` | 390 × 10039 | CTA bertumpuk, fitur dan metrik menjadi satu kolom, galeri memperlihatkan sebagian layar berikutnya. [Render](../design/review/layout-390.webp) |
-| `WEB_04_Mobile_320_Check` | 320 × 10060 | Seluruh section termuat. Dua ponsel berada di bawah label platform. Tombol galeri dipadatkan, metadata tetap terbaca, dan checksum terbagi empat baris. [Render](../design/review/layout-320.webp) |
+| `WEB_01_Desktop_1440` | 1440 × 7844 | Navigasi penuh, hero terpusat di atas mockup, dua kartu besar dan empat kartu pendukung sebaris, lima layar galeri terlihat. [Render](../design/review/layout-1440.webp) |
+| `WEB_02_Tablet_768` | 768 × 8187 | Menu ringkas, ponsel di bawah copy hero, kartu pendukung dua kolom, spotlight dan unduhan bertumpuk. [Render](../design/review/layout-768.webp) |
+| `WEB_03_Mobile_390` | 390 × 10060 | CTA bertumpuk, fitur dan metrik menjadi satu kolom, galeri memperlihatkan sebagian layar berikutnya. [Render](../design/review/layout-390.webp) |
+| `WEB_04_Mobile_320_Check` | 320 × 10082 | Seluruh section termuat. Dua ponsel berada di bawah label platform. Tombol galeri dipadatkan, metadata tetap terbaca, dan checksum terbagi empat baris. [Render](../design/review/layout-320.webp) |
 
-Tujuh frame pendukung membentuk pustaka desain.
+Delapan frame pendukung membentuk pustaka desain.
 
 | Frame | Isi |
 | --- | --- |
@@ -30,6 +30,7 @@ Tujuh frame pendukung membentuk pustaka desain.
 | `WEB_08_FAQ_States` | Pertanyaan tertutup, jawaban terbuka, dan fokus keyboard |
 | `WEB_09_Download_States` | Dua keluarga CTA, kartu kandidat, dan dua ukuran panel verifikasi |
 | `WEB_10_Navigation_States` | Header, footer, dan menu ringkas beserta tujuan tiap breakpoint |
+| `WEB_11_Control_and_image_states` | Empat varian tombol dengan empat state per varian, serta fallback gambar, loading dan ready dalam area berasio tetap |
 
 ## Struktur halaman
 
@@ -63,9 +64,9 @@ Tujuh frame pendukung membentuk pustaka desain.
 
 Bricolage Grotesque dipakai untuk judul, paragraf, dan tombol. Space Mono membedakan waktu, versi dan label kecil. Ukuran judul hero dari desktop ke layar sempit adalah 74, 66, 52 dan 47 px. Judul section umumnya 58, 45, 40 dan 35 px. Body utama 16–22 px dengan line-height sekitar 1,4. Label pendamping 11 px selalu mendapat keterangan yang lebih besar bila informasinya menentukan tindakan.
 
-Margin isi pada 1440, 768, dan ponsel masing-masing 80, 44, dan 20 px. Jarak grid 24, 18, dan 14 px. Mayoritas radius kartu 15–24 px dan tombol utama tinggi 50 px dengan radius 25 px. Gunakan garis dalam 1 px untuk pemisah. Outline pekat dan bayangan offset terutama berasal dari UI produk di dalam ponsel.
+Grid FigCraft menggunakan 12 kolom desktop, 8 tablet, dan 4 ponsel. Margin acuan 80, 40, dan 16 px dengan gutter 24, 16, dan 8 px. Grid dapat diaktifkan untuk inspeksi. Kartu fitur memakai radius 16 atau 24 px. Tombol utama setinggi 48 px dengan radius 24 px, padding horizontal 24 px, dan jarak antartombol hero 8 px. Gunakan garis dalam 1 px untuk pemisah. Outline pekat dan bayangan offset terutama berasal dari UI produk di dalam ponsel.
 
-Ada **12 keluarga komponen** yang dapat digunakan ulang. Header dan responsive menu mengelola navigasi. Primary CTA dan secondary CTA memiliki state default, hover, focus, active, dan disabled. Feature card, feature highlight, statistics card, dan section heading mengatur konten editorial. Phone mockup mencakup shell netral untuk layar tunggal serta master PNG untuk pasangan ponsel pada hero. FAQ accordion, download information card, dan footer melengkapi halaman. Dokumen berisi 29 master komponen, dua set varian tombol, empat text styles, dan satu koleksi dengan sepuluh warna serta delapan boolean FAQ.
+Halaman memakai **12 keluarga komponen inti** yang dapat digunakan ulang. Header dan responsive menu mengelola navigasi. Primary CTA dan secondary CTA memiliki state default, hover, focus, active, dan disabled. Feature card, feature highlight, statistics card, dan section heading mengatur konten editorial. Phone mockup mencakup shell netral untuk layar tunggal serta master PNG untuk pasangan ponsel pada hero. FAQ accordion, download information card, dan footer melengkapi halaman. Dokumen berisi 40 master komponen termasuk pustaka kontrol tambahan, empat set varian tombol, empat text styles, dan satu koleksi dengan sepuluh warna serta delapan boolean FAQ.
 
 ## Aset dan provenance
 
@@ -92,7 +93,7 @@ Sumber visual aplikasi adalah `Personal Planner - Flutter UI Design.figcraft`, t
 - Keempat flow mempunyai anchor internal untuk navigasi dan CTA. Menu tablet/ponsel memakai overlay dengan aksi tutup. Panel checksum dapat ditutup melalui tombol, klik di luar panel, atau Escape. Tidak ada aksi prototipe yang membuka URL eksternal.
 - Delapan pertanyaan memakai nilai boolean independen. Jawaban terbuka menambah tinggi daftar melalui auto layout. Pertanyaan pertama terbuka pada tampilan awal. State FAQ terpilih memperlihatkan tanda minus. Pertanyaan mendukung klik, Enter, dan Space pada prototipe. State visual fokus dicontohkan di pustaka.
 - Galeri menyimpan kelima perangkat dalam kontainer clip dengan overflow horizontal. Pada 768, 390, dan 320 px, tombol tujuan memberi alternatif terhadap geser. Halaman di luar galeri mengikuti lebar frame.
-- QA dilakukan pada raster keempat ukuran dan geometri dokumen. Seluruh 56 section ditemukan. Semua target interaksi menunjuk node yang ada. Kotak teks berada dalam batas parent di keempat frame utama. Uji buka FAQ update pada 320 px memperbesar tinggi halaman sebesar 111 px dan menutupnya mengembalikan tinggi awal.
+- QA dilakukan pada raster keempat ukuran dan geometri dokumen. Seluruh 56 section ditemukan. Semua target interaksi menunjuk node yang ada. Kotak teks berada dalam batas parent di keempat frame utama. Uji buka FAQ update pada 320 px memperbesar tinggi halaman sebesar 112 px dan menutupnya mengembalikan tinggi awal.
 - Rasio pasangan warna terhitung sebesar 16,02:1 untuk Ink/Cream, 5,48:1 untuk Ink/Ember, 6,79:1 untuk teks sekunder/Cream, dan 8,23:1 untuk label terang/charcoal. Angka metrik, teks penjelas, dan state pending tetap dapat dimengerti tanpa membedakan warna.
 - Pada fase Astro, uji zoom teks 200%, navigasi Tab, fokus sesudah menutup menu, pembacaan screen reader, dan sentuhan pada perangkat. Validasi ini memerlukan implementasi browser. Pertahankan target interaktif minimal 44 × 44 CSS px dan gunakan offset anchor agar header sticky tidak menutup judul.
 
@@ -107,6 +108,12 @@ Buka halaman `Routina · Motion Studies` dalam dokumen FigCraft, lalu pilih sala
 | `Motion · App Screenshots` | Next screen, drag, atau panah kanan memindahkan layar berikutnya ke tengah selama 480 ms. Gunakan Previous atau panah kiri untuk mundur. Dari Statistik, Replay gallery kembali ke Home. | `views/works.tsx` menggerakkan track secara horizontal saat section desktop dipin. Studi memakai navigasi manual. |
 
 Gerakan merupakan opsi untuk review Fase 21A. Pratinjau WebP menggerakkan galeri otomatis agar ketiga contoh dapat dibandingkan. Dalam flow FigCraft, pembaca sendiri menentukan kapan galeri bergerak. Untuk implementasi dengan reduced motion, tampilkan langsung judul dalam keadaan akhir dan pindahkan galeri ke layar pilihan tanpa transisi.
+
+## Penerapan RULESDESIGN v0.1
+
+Pada frame utama, menu ponsel menggunakan wrapper 48 × 48 px dengan ikon 24 px. FAQ memakai tinggi pertanyaan 64–72 px serta jawaban yang mengikuti isi. Body jawaban menggunakan line-height 24 px pada ponsel dan 28 px pada layar yang lebih lebar. Label membantu membedakan aksi utama, aksi pendukung dan status kandidat.
+
+Pustaka Button memuat Primary, Outline, Text, dan Destructive dalam keadaan Default, Hover, Pressed, dan Disabled. Destructive hanya contoh pustaka. Pada contoh Product image, Try again menampilkan status loading kemudian preview dalam kontainer dengan rasio yang sama. Transisi itu merupakan simulasi FigCraft. Pada implementasi website, gunakan hasil pemuatan aset untuk menentukan status dan sembunyikan aksi retry selama permintaan berlangsung. Acuan istilah komponen adalah [UI Guideline Button](https://www.uiguideline.com/components/button).
 
 ## Handoff implementasi Astro setelah persetujuan
 
